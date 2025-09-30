@@ -13,9 +13,9 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'case-studies':
-        return <CaseStudies />;
+        return <CaseStudies onNavigate={setCurrentPage} />;
       case 'relaxing-sounds':
-        return <RelaxingSounds />;
+        return <RelaxingSounds onNavigate={setCurrentPage} />;
       default:
         return <HomePage onNavigate={setCurrentPage} />;
     }

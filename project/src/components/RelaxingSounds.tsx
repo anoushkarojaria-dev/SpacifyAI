@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Play, Pause, Volume2 } from 'lucide-react';
 
-const RelaxingSounds: React.FC = () => {
+interface RelaxingSoundsProps {
+  onNavigate: (page: 'home' | 'case-studies' | 'relaxing-sounds') => void;
+}
+
+const RelaxingSounds: React.FC<RelaxingSoundsProps> = ({ onNavigate }) => {
   const [playingSound, setPlayingSound] = useState<string | null>(null);
 
   const spaceSound = [
@@ -46,8 +50,9 @@ const RelaxingSounds: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center mb-8">
           <button 
-            onClick={() => window.history.back()}
+            onClick={() => onNavigate('home')}
             className="galaxy-back-button mr-4"
+            title="Back to Home"
           >
             <ArrowLeft size={20} />
           </button>

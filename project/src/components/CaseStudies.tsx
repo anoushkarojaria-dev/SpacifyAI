@@ -1,14 +1,19 @@
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
 
-const CaseStudies: React.FC = () => {
+interface CaseStudiesProps {
+  onNavigate: (page: 'home' | 'case-studies' | 'relaxing-sounds') => void;
+}
+
+const CaseStudies: React.FC<CaseStudiesProps> = ({ onNavigate }) => {
   return (
     <div className="min-h-screen px-4 py-20">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center mb-8">
           <button 
-            onClick={() => window.history.back()}
+            onClick={() => onNavigate('home')}
             className="galaxy-back-button mr-4"
+            title="Back to Home"
           >
             <ArrowLeft size={20} />
           </button>
