@@ -38,6 +38,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               className={`galaxy-button-main w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all duration-300 ${
                 isPanelOpen ? 'scale-110' : 'hover:scale-105'
               }`}
+              title="Open Navigation Panel"
             >
               <div className="w-8 h-8 galaxy-orb"></div>
             </button>
@@ -46,24 +47,24 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className={`navigation-panel ${isPanelOpen ? 'open' : ''}`}>
               <button
                 onClick={() => handleNavigation('home')}
-                className="panel-button"
-                style={{ transform: 'translate(-50%, -50%) rotate(-60deg) translateX(80px) rotate(60deg)' }}
+                className="panel-button panel-home"
+                title="Home"
               >
                 <Home size={20} />
                 <span className="button-text">Home</span>
               </button>
               <button
                 onClick={() => handleNavigation('case-studies')}
-                className="panel-button"
-                style={{ transform: 'translate(-50%, -50%) rotate(0deg) translateX(80px) rotate(0deg)' }}
+                className="panel-button panel-case-studies"
+                title="Case Studies"
               >
                 <BookOpen size={20} />
                 <span className="button-text">Case Studies</span>
               </button>
               <button
                 onClick={() => handleNavigation('relaxing-sounds')}
-                className="panel-button"
-                style={{ transform: 'translate(-50%, -50%) rotate(60deg) translateX(80px) rotate(-60deg)' }}
+                className="panel-button panel-relaxing-sounds"
+                title="Sounds"
               >
                 <Music size={20} />
                 <span className="button-text">Sounds</span>
@@ -84,10 +85,10 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             className="galaxy-search-input"
           />
           <div className="search-icons">
-            <button className="search-icon-button">
+            <button className="search-icon-button" title="Search">
               <Search size={20} />
             </button>
-            <button className="search-icon-button">
+            <button className="search-icon-button" title="Voice Search">
               <Mic size={20} />
             </button>
           </div>

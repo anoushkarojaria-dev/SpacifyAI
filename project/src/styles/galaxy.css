@@ -1,3 +1,13 @@
+/* Navigation panel button transforms for HomePage */
+.panel-home {
+  transform: translate(-50%, -50%) rotate(-60deg) translateX(80px) rotate(60deg);
+}
+.panel-case-studies {
+  transform: translate(-50%, -50%) rotate(0deg) translateX(80px) rotate(0deg);
+}
+.panel-relaxing-sounds {
+  transform: translate(-50%, -50%) rotate(60deg) translateX(80px) rotate(-60deg);
+}
 /* Shift main button up for HomePage vertical alignment */
 .galaxy-main-btn-shift {
   position: relative;
