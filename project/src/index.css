@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom font utility for fun headings */
+.font-fun {
+	font-family: 'Luckiest Guy', 'Fredoka', cursive, sans-serif;
+}
